@@ -1,0 +1,375 @@
+.sidebar {
+    width: 100%;
+    max-width:auto;
+    height: 100%;
+    color: #ffffff;
+    padding:15px;
+  }
+  
+  .header-container {
+    position: relative;
+    padding-bottom: 2px; 
+    margin-bottom: 12px;
+}
+
+.header-container::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: -15px; 
+    width: 110%; 
+    height: 4px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    height: 10%;
+  }
+  
+  
+  .profile-icon {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 40%; 
+}
+
+.header h5 {
+    margin-left: 5px; 
+    font-size: 1.2rem; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: calc(100% - 60px); 
+}
+  
+.lefticons {
+  display: flex;
+  gap: 12px;
+  margin-left: 20px;
+
+}
+.leftheader-icon{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+  
+  .search-bar {
+    width: 100%; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+  
+  .search-bar-form {
+    display: flex;
+    align-items: center;
+    background-color: #1d4a7a;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+  }
+  
+  .left-search-icon {
+    color: #ffffff;
+    margin-right: 8px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+  }
+
+ 
+ 
+  .user-list {
+    max-height: calc(100vh - 160px); 
+    overflow-y: hidden; 
+    padding-right: 10px;
+    margin-top: 10px; 
+    
+  }
+  
+  
+  .user-list:hover {
+    overflow-y: auto; 
+  }
+  
+ 
+/* Custom scrollbar styling for WebKit browsers */
+
+.user-list::-webkit-scrollbar-track {
+  background: transparent;
+ 
+ 
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); 
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  
+}
+
+.user-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5); 
+  
+}
+
+/* For non-WebKit browsers */
+.user-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  padding-bottom: 50px;
+}
+
+
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 17px;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+  }
+  .sidebar-item:hover {
+    border-radius: 8px;
+    background-color: #008cff61;;
+    
+  }
+  
+  .sidebar-item.selected {
+    background-color: #007bff; /* Selected background color */
+    max-height: auto;
+    border-radius: 10px;
+    /* margin: 15px; */
+  }
+  
+  .sidebar-item.selected:hover {
+    background-color: #007bff;
+    border-radius: 10px; 
+  }
+  
+  
+  .user-icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 40%;
+  }
+  
+  .online-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    border: 2px solid green;
+  }
+  
+  
+  
+  
+  .user-info {
+    flex-grow: 1;
+    margin-left: 10px; 
+}
+  .user-info h6 {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    background: wheat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.9rem; 
+    margin: 0; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+  }
+  
+  .user-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #a0a0a0;
+  }
+  
+  .user-separator {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 8px 0;
+    border-color: #ddd;
+
+  }
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 70px;
+  right: 1px;
+  width: auto;
+  max-height: 350px;
+  padding: 20px;
+  color: white;
+  z-index: 100;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#glass-effect {
+  background-color: rgba(17, 25, 40, 0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  backdrop-filter: blur(9px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  top: 70px;
+  right: 1px;
+  width: auto;
+  max-height: 350px;
+  padding: 20px;
+  color: white;
+  z-index: 100;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.show-dropdown .dropdown-menu {
+  display: block !important; /* Make visible when class is added */
+}
+
+
+/* Dropdown Search Bar Styling */
+.dropdown-search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; 
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+
+.friends-list {
+  max-height: 250px; 
+  overflow-y: auto;
+  margin: 0; 
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.friends-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.friends-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.friends-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Friend Item Styling */
+.friend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.friend-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* Friend Icon and Image Styling */
+.friend-icon-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 15px; /* Adjust spacing between icon and name */
+}
+
+.friend-icon {
+  width: 50px; /* Increased icon size */
+  height: 50px; 
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
+.friend-online-dot {
+  position: absolute;
+  top: 5px; /* Adjusted to fit well on larger icon */
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+/* Friend Name and Message Styling */
+.friend-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Center alignment */
+}
+
+.friend-name {
+  font-size: 0.85rem; /* Slightly larger font size for emphasis */
+  margin: 0;
+}
+
+.friend-message {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+
+/* Add Friend Icon Styling */
+.add-friend-icon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem; 
+  margin-left: 15px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.add-friend-icon:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+

@@ -1,0 +1,476 @@
+/* Universal Container and Background */
+.app-bg-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glass Effect */
+.glass-container {
+    padding: 20px;
+    width: 55%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    
+}
+
+.auth-logo {
+    width: 160px; 
+    height: 160px;
+}
+
+
+/* Header Style */
+.auth-header {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    
+}
+
+.auth-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e5e5e5;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+/* Input Fields */
+.auth-input,.email-input,.auth-login ,.auth-login-password{
+    width: 600px;
+    padding: 15px;
+    font-size: 1.1rem;
+    height: 52px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.3s ease;
+    
+}
+.email-input{
+    width: 500px;
+    
+}
+.auth-login{
+    width: 680px;
+    
+}
+
+
+
+
+.auth-input::placeholder,.email-input::placeholder,.auth-login::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.auth-input:focus {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* OTP Input */
+.otp-input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.otp-input {
+    width: 100%;
+    max-width: 70px;
+    height: 50px;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.otp-input:focus {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-color: #3b82f6;
+}
+
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+
+/* Password Toggle Button (Show/Hide Icon) */
+.show-password-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: black; 
+  }
+
+.input-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 32px; 
+    width: 100%;
+    max-width: 700px; 
+}
+
+
+.input-container.with-verify {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    position: relative;
+}
+
+
+
+#verify-btn {
+    height: 55px;
+    padding: 0 10px;
+    width: 82px;
+    padding: 0.5rem;
+    margin-left: 0.7rem;
+    background-color: #3bf670;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#verify-btn:hover {
+    background-color: #2563eb;
+}
+
+  
+  #verify-btn:active,
+  #verify-btn:focus {
+    color: white;
+    border-color: wheat;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  
+ 
+/* Adjusted Error Message Position */
+.error-message {
+    color: red;
+    font-size: 0.90rem;
+    position: absolute;
+    right: 10px;
+    bottom: -19px; 
+    white-space: nowrap;
+    margin: 0; 
+}
+
+
+.auth-input:invalid {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-color: red;
+}
+
+/* Buttons */
+#auth-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+
+
+#auth-btn:hover,.verify-email-btn:hover  {
+    /* background-color: #2563eb; */
+    transform: scale(1.02);
+}
+
+#auth-btn:active {
+    background-color: #1e3a8a;
+}
+
+/* Checkbox Container */
+.auth-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #ffffff;
+   
+}
+
+.auth-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+/* Password Toggle Button */
+.show-password-btn {
+    position: absolute;
+    right: 25px;
+    top: calc(50% - 16px);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Links and Divider */
+.auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 24px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.auth-links a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+/* Style gender options side-by-side */
+/* Gender Container */
+
+.text-gender{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e5e5e5;
+    margin-bottom: 4px;
+    width: 100%;
+}
+.gender-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Style each gender label for alignment and appearance */
+  .gender-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .gender-label:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .gender-label input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2); 
+  }
+  
+  
+  .male {
+    color: #4db8ff; 
+  }
+  
+  .female {
+    color: #ff6fb8; 
+  }
+  
+
+
+  /* //animation section// */
+  .auth-logo {
+    animation: fadeIn 1.5s ease-in-out;
+}
+.auth-header {
+    animation: slideIn 1.5s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.auth-checkbox input[type="checkbox"]:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+@media (max-width: 768px) {
+    .auth-login {
+        width: 90%; 
+    }
+    .glass-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+}
+#auth-btn:active {
+    transform: scale(0.98);
+}
+#auth-btn.success {
+    animation: bounce 0.5s ease;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .auth-login,
+    .email-input,
+    .otp-input-group {
+        width: 100%; 
+    }
+
+    .glass-container {
+        width: 90%;
+        height: auto; 
+        padding: 20px;
+    }
+
+    .auth-header {
+        font-size: 2rem; 
+    }
+
+    .auth-text {
+        font-size: 0.9rem;
+    }
+
+    .auth-input,
+    .otp-input {
+        height: 45px; 
+        font-size: 1rem;
+    }
+
+    #auth-btn {
+        padding: 12px;
+        font-size: 1rem; /* Adjust button size */
+    }
+
+    #verify-btn {
+        width: auto; /* Allow button to shrink */
+        padding: 0.5rem 1rem;
+    }
+
+    .gender-container {
+        flex-direction: column; /* Stack gender options vertically */
+        gap: 10px;
+    }
+
+    .gender-label {
+        font-size: 1rem; /* Adjust font size for gender labels */
+    }
+}
+
+/* Extra Small Screens */
+/* Extra Small Screens */
+@media (max-width: 470px) {
+    .auth-header {
+        font-size: 1.5rem; /* Further reduce header font size */
+    }
+
+    .auth-logo {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .auth-input,
+    .otp-input {
+        width: 100%; 
+        font-size: 0.9rem; 
+        height: 50px;
+    }
+    .auth-input{
+        width: 240px;
+    }
+
+    .auth-input::placeholder, 
+    .email-input::placeholder, 
+    .auth-login::placeholder {
+        font-size: 0.85rem; /* Smaller placeholder size */
+    }
+
+    .input-container {
+        position: relative;
+        width: 100%; /* Ensure full width */
+    }
+
+    .show-password-btn {
+        font-size: 1.2rem; /* Smaller icon size */
+        right: 8px; /* Adjust spacing for smaller screens */
+        top: calc(50% - 14px); /* Re-center the icon */
+    }
+
+
+    .auth-input:focus,
+    .otp-input:focus {
+        background-color: rgba(255, 255, 255, 0.3); /* Subtle focus effect */
+    }
+
+    .auth-links {
+        font-size: 0.85rem;
+        flex-wrap: wrap; /* Wrap links if they don't fit */
+    }
+
+    #auth-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
